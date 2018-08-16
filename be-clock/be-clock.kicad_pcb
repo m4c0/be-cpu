@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 11)
+    (drawings 12)
     (tracks 208)
     (zones 0)
     (modules 29)
@@ -1384,6 +1384,18 @@
     )
   )
 
+  (dimension 3.4 (width 0.3) (layer Dwgs.User)
+    (gr_text "3.400 mm" (at 182.7 62.5 270) (layer Dwgs.User)
+      (effects (font (size 1.5 1.5) (thickness 0.3)))
+    )
+    (feature1 (pts (xy 178.8 64.2) (xy 181.186421 64.2)))
+    (feature2 (pts (xy 178.8 60.8) (xy 181.186421 60.8)))
+    (crossbar (pts (xy 180.6 60.8) (xy 180.6 64.2)))
+    (arrow1a (pts (xy 180.6 64.2) (xy 180.013579 63.073496)))
+    (arrow1b (pts (xy 180.6 64.2) (xy 181.186421 63.073496)))
+    (arrow2a (pts (xy 180.6 60.8) (xy 180.013579 61.926504)))
+    (arrow2b (pts (xy 180.6 60.8) (xy 181.186421 61.926504)))
+  )
   (gr_text "BE-CLOCK v0.1" (at 174.5 83 90) (layer B.SilkS) (tstamp 5B635C9F)
     (effects (font (size 1.5 1.5) (thickness 0.3)) (justify mirror))
   )

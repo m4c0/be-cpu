@@ -125,21 +125,21 @@ Text Label 5900 2900 0    50   ~ 0
 BUS6
 Text Label 5900 3000 0    50   ~ 0
 BUS7
-Text Label 2400 4700 2    50   ~ 0
-BUS7
-Text Label 2400 4600 2    50   ~ 0
-BUS6
-Text Label 2400 4500 2    50   ~ 0
-BUS5
 Text Label 2400 4400 2    50   ~ 0
+BUS7
+Text Label 2400 4500 2    50   ~ 0
+BUS6
+Text Label 2400 4600 2    50   ~ 0
+BUS5
+Text Label 2400 4700 2    50   ~ 0
 BUS4
-Text Label 2400 2000 2    50   ~ 0
-BUS3
-Text Label 2400 1900 2    50   ~ 0
-BUS2
-Text Label 2400 1800 2    50   ~ 0
-BUS1
 Text Label 2400 1700 2    50   ~ 0
+BUS3
+Text Label 2400 1800 2    50   ~ 0
+BUS2
+Text Label 2400 1900 2    50   ~ 0
+BUS1
+Text Label 2400 2000 2    50   ~ 0
 BUS0
 $Comp
 L Connector_Generic:Conn_01x08 J2
@@ -228,7 +228,7 @@ F 1 "LED" H 9650 2150 50  0000 C CNN
 F 2 "LED_SMD:LED_1206_3216Metric" H 9800 2100 50  0001 C CNN
 F 3 "~" H 9800 2100 50  0001 C CNN
 	1    9800 2100
-	-1   0    0    1   
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	9500 2100 9650 2100
@@ -254,7 +254,7 @@ F 1 "LED" H 9650 2350 50  0000 C CNN
 F 2 "LED_SMD:LED_1206_3216Metric" H 9800 2300 50  0001 C CNN
 F 3 "~" H 9800 2300 50  0001 C CNN
 	1    9800 2300
-	-1   0    0    1   
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	9500 2300 9650 2300
@@ -280,7 +280,7 @@ F 1 "LED" H 9650 2550 50  0000 C CNN
 F 2 "LED_SMD:LED_1206_3216Metric" H 9800 2500 50  0001 C CNN
 F 3 "~" H 9800 2500 50  0001 C CNN
 	1    9800 2500
-	-1   0    0    1   
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	9500 2500 9650 2500
@@ -306,7 +306,7 @@ F 1 "LED" H 9650 2750 50  0000 C CNN
 F 2 "LED_SMD:LED_1206_3216Metric" H 9800 2700 50  0001 C CNN
 F 3 "~" H 9800 2700 50  0001 C CNN
 	1    9800 2700
-	-1   0    0    1   
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	9500 2700 9650 2700
@@ -332,7 +332,7 @@ F 1 "LED" H 9650 2950 50  0000 C CNN
 F 2 "LED_SMD:LED_1206_3216Metric" H 9800 2900 50  0001 C CNN
 F 3 "~" H 9800 2900 50  0001 C CNN
 	1    9800 2900
-	-1   0    0    1   
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	9500 2900 9650 2900
@@ -358,7 +358,7 @@ F 1 "LED" H 9650 3150 50  0000 C CNN
 F 2 "LED_SMD:LED_1206_3216Metric" H 9800 3100 50  0001 C CNN
 F 3 "~" H 9800 3100 50  0001 C CNN
 	1    9800 3100
-	-1   0    0    1   
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	9500 3100 9650 3100
@@ -384,7 +384,7 @@ F 1 "LED" H 9650 3350 50  0000 C CNN
 F 2 "LED_SMD:LED_1206_3216Metric" H 9800 3300 50  0001 C CNN
 F 3 "~" H 9800 3300 50  0001 C CNN
 	1    9800 3300
-	-1   0    0    1   
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	9500 3300 9650 3300
@@ -410,7 +410,7 @@ F 1 "LED" H 9650 3550 50  0000 C CNN
 F 2 "LED_SMD:LED_1206_3216Metric" H 9800 3500 50  0001 C CNN
 F 3 "~" H 9800 3500 50  0001 C CNN
 	1    9800 3500
-	-1   0    0    1   
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	9500 3500 9650 3500
@@ -427,19 +427,6 @@ F 3 "~" H 9350 3500 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9950 3500 10100 3500
-$Comp
-L power:GND #PWR0105
-U 1 1 5B6DB822
-P 10100 3650
-F 0 "#PWR0105" H 10100 3400 50  0001 C CNN
-F 1 "GND" H 10105 3477 50  0000 C CNN
-F 2 "" H 10100 3650 50  0001 C CNN
-F 3 "" H 10100 3650 50  0001 C CNN
-	1    10100 3650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10100 3650 10100 3500
 Connection ~ 10100 2300
 Wire Wire Line
 	10100 2300 10100 2100
@@ -458,7 +445,6 @@ Wire Wire Line
 Connection ~ 10100 3300
 Wire Wire Line
 	10100 3300 10100 3100
-Connection ~ 10100 3500
 Wire Wire Line
 	10100 3500 10100 3300
 Text Label 7600 2800 2    50   ~ 0
@@ -561,21 +547,21 @@ Text Label 4700 2900 2    50   ~ 0
 RAW6
 Text Label 4700 3000 2    50   ~ 0
 RAW7
-Text Label 3800 1700 0    50   ~ 0
-RAW0
-Text Label 3800 1800 0    50   ~ 0
-RAW1
-Text Label 3800 1900 0    50   ~ 0
-RAW2
 Text Label 3800 2000 0    50   ~ 0
+RAW0
+Text Label 3800 1900 0    50   ~ 0
+RAW1
+Text Label 3800 1800 0    50   ~ 0
+RAW2
+Text Label 3800 1700 0    50   ~ 0
 RAW3
-Text Label 3800 4400 0    50   ~ 0
-RAW4
-Text Label 3800 4500 0    50   ~ 0
-RAW5
-Text Label 3800 4600 0    50   ~ 0
-RAW6
 Text Label 3800 4700 0    50   ~ 0
+RAW4
+Text Label 3800 4600 0    50   ~ 0
+RAW5
+Text Label 3800 4500 0    50   ~ 0
+RAW6
+Text Label 3800 4400 0    50   ~ 0
 RAW7
 $Comp
 L Connector_Generic:Conn_01x04 J3
@@ -777,4 +763,18 @@ Text Label 8100 5100 2    50   ~ 0
 RAW6
 Text Label 8100 5200 2    50   ~ 0
 RAW7
+$Comp
+L power:VCC #PWR0105
+U 1 1 5B801FD3
+P 10100 1900
+F 0 "#PWR0105" H 10100 1750 50  0001 C CNN
+F 1 "VCC" H 10117 2073 50  0000 C CNN
+F 2 "" H 10100 1900 50  0001 C CNN
+F 3 "" H 10100 1900 50  0001 C CNN
+	1    10100 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 1900 10100 2100
+Connection ~ 10100 2100
 $EndSCHEMATC
