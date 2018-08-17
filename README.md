@@ -8,9 +8,17 @@ One main difference from the original design is how I use SMT instead of THT. Ma
 
 Another difference is the replacement of every TTL chip (74LS) with their CMOS variants (74HC). They are easier and cheaper to find.
 
-## Modules
+## Versions
 
-### Clock
+*Note:* Due to time (and money) restrictions, some combination of version/modules may not be tested, yet.
+
+### BE - Eater's version
+
+This is as close as possible to Ben's own version. There's no substantial change in his design, other than changes that are required to make the CPU work.
+
+This version acts as a "reference design" for other versions.
+
+#### Clock
 
 The version 0.1 of that module follows these original design decisions (shown in [this video](https://www.youtube.com/watch?v=SmQ5K7UQPMM)):
 
@@ -30,7 +38,7 @@ I took the liberty of doing these changes:
 
 The whole design currently fits in a 4x3.6mm board. You can buy one for yourself at [OSHPark](https://oshpark.com/shared_projects/r4cIYBAv).
 
-### Register
+#### Register
 
 The version 0.1 of that module contain these from the original design (shown in [this video](https://www.youtube.com/watch?v=CiMaWbz_6E8)):
 
@@ -42,3 +50,18 @@ There's only one considerable change in this design. The output LEDs are not dir
 
 It also contains an extra 8-bit header from the output of the 74173. This serves for "hot linking" the register without the bus - in this case, the "B" register and the ALU input.
 
+### BM - My own version
+
+This is my own version of Ben's CPU. It will replace components and change architecture. Since it's laxed, more experimental features goes here.
+
+#### Clock
+
+Still in planning. Main question is: is there a way to avoid the triple 555 and keep Ben's features?
+
+#### Register
+
+Main idea to test: use 74377 (Octal DFF) and remove the reset input. A "global reset" may be achieveable if we keep the pull-down resistors on the bus and we enable all register's input - this way, the bus will be zeroed and the registers will latch that value.
+
+### BC - Compact and cheap
+
+This is will be smaller and containing less modules (or cheaper ones). All modules will be non-suitable for children under 4, because they will be tiny (1.35"/3.7cm large). It provides building blocks to easily test high level architectures, while still being a good educational toy.
