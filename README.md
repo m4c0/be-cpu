@@ -64,4 +64,4 @@ Main idea to test: use 74377 (Octal DFF) and remove the reset input. A "global r
 
 ### BC - Compact and cheap
 
-This is will be smaller and containing less modules (or cheaper ones). All modules will be non-suitable for children under 4, because they will be tiny (1.35"/3.7cm large). It provides building blocks to easily test high level architectures, while still being a good educational toy.
+This is will be smaller and containing less modules (or cheaper ones). All modules will be non-suitable for children under 4, because they will be tiny (1.35"/3.7cm wide). It provides building blocks to easily test high level architectures, while still being a good educational toy.
