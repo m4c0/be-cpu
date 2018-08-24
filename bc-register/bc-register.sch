@@ -72,25 +72,25 @@ Text Label 9800 4250 2    50   ~ 0
 VCC
 Text Label 10300 4250 0    50   ~ 0
 GND
-Text Label 9800 4750 2    50   ~ 0
-BUS0
 Text Label 9800 4850 2    50   ~ 0
-BUS1
+BUS0
 Text Label 9800 4950 2    50   ~ 0
-BUS2
+BUS1
 Text Label 9800 5050 2    50   ~ 0
-BUS3
+BUS2
 Text Label 9800 5150 2    50   ~ 0
-BUS4
+BUS3
 Text Label 9800 5250 2    50   ~ 0
-BUS5
+BUS4
 Text Label 9800 5350 2    50   ~ 0
-BUS6
+BUS5
 Text Label 9800 5450 2    50   ~ 0
+BUS6
+Text Label 9800 5550 2    50   ~ 0
 BUS7
-Text Label 9800 4550 2    50   ~ 0
+Text Label 9800 5850 2    50   ~ 0
 CLK
-Text Label 9800 4450 2    50   ~ 0
+Text Label 9800 5950 2    50   ~ 0
 ~IE
 Text Label 9800 5750 2    50   ~ 0
 ~OE
@@ -420,13 +420,13 @@ Text Label 4500 2900 0    50   ~ 0
 RAW2
 Text Label 4500 2800 0    50   ~ 0
 RAW3
-Text Label 4500 2400 0    50   ~ 0
-RAW4
-Text Label 4500 2500 0    50   ~ 0
-RAW5
 Text Label 4500 2600 0    50   ~ 0
-RAW6
+RAW4
 Text Label 4500 2700 0    50   ~ 0
+RAW5
+Text Label 4500 2500 0    50   ~ 0
+RAW6
+Text Label 4500 2400 0    50   ~ 0
 RAW7
 $Comp
 L power:GND #PWR0105
@@ -458,13 +458,13 @@ Text Label 3500 2900 2    50   ~ 0
 BUS2
 Text Label 3500 2800 2    50   ~ 0
 BUS3
-Text Label 3500 2400 2    50   ~ 0
-BUS4
-Text Label 3500 2500 2    50   ~ 0
-BUS5
 Text Label 3500 2600 2    50   ~ 0
-BUS6
+BUS4
 Text Label 3500 2700 2    50   ~ 0
+BUS5
+Text Label 3500 2500 2    50   ~ 0
+BUS6
+Text Label 3500 2400 2    50   ~ 0
 BUS7
 Text Label 3500 3400 2    50   ~ 0
 ~IE
@@ -520,21 +520,9 @@ BUS6
 Text Label 6500 3100 0    50   ~ 0
 BUS7
 NoConn ~ 10300 4850
-NoConn ~ 10300 4550
 NoConn ~ 10300 4650
 NoConn ~ 10300 4750
 NoConn ~ 10300 5150
-$Comp
-L Connector_Generic:Conn_02x18_Odd_Even J1
-U 1 1 5B7C23AC
-P 10000 5050
-F 0 "J1" H 10050 6067 50  0000 C CNN
-F 1 "Conn_02x18_Odd_Even" H 10050 5976 50  0000 C CNN
-F 2 "footprints:card-edge-2x18-100mils" H 10000 5050 50  0001 C CNN
-F 3 "~" H 10000 5050 50  0001 C CNN
-	1    10000 5050
-	1    0    0    -1  
-$EndComp
 NoConn ~ 10300 4950
 NoConn ~ 10300 5250
 NoConn ~ 10300 5350
@@ -544,19 +532,32 @@ NoConn ~ 10300 5650
 NoConn ~ 10300 5750
 NoConn ~ 10300 5050
 NoConn ~ 10300 4450
-NoConn ~ 9800 5550
-NoConn ~ 9800 5650
+NoConn ~ 9800 4550
+NoConn ~ 9800 4450
 NoConn ~ 9800 4650
-Text Label 10300 5950 0    50   ~ 0
+Text Label 10300 6150 0    50   ~ 0
 VCC
-Text Label 9800 5950 2    50   ~ 0
+Text Label 9800 6150 2    50   ~ 0
 GND
 Text Label 9800 4350 2    50   ~ 0
 VCC
 Text Label 10300 4350 0    50   ~ 0
 GND
-Text Label 10300 5850 0    50   ~ 0
+Text Label 10300 6050 0    50   ~ 0
 VCC
-Text Label 9800 5850 2    50   ~ 0
+Text Label 9800 6050 2    50   ~ 0
 GND
+$Comp
+L Connector_Generic:Conn_02x20_Odd_Even J1
+U 1 1 5B7DAA2C
+P 10000 5150
+F 0 "J1" H 10050 6267 50  0000 C CNN
+F 1 "Conn_02x20_Odd_Even" H 10050 6176 50  0000 C CNN
+F 2 "footprints:card-edge-2x20-800um" H 10000 5150 50  0001 C CNN
+F 3 "~" H 10000 5150 50  0001 C CNN
+	1    10000 5150
+	1    0    0    -1  
+$EndComp
+Text Label 10300 4550 0    50   ~ 0
+CLK
 $EndSCHEMATC
