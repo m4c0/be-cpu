@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:bc-register-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -70,7 +71,7 @@ F 3 "~" H 7850 5400 50  0001 C CNN
 $EndComp
 Text Label 9800 4250 2    50   ~ 0
 VCC
-Text Label 10300 4250 0    50   ~ 0
+Text Label 9800 4350 2    50   ~ 0
 GND
 Text Label 9800 4850 2    50   ~ 0
 BUS0
@@ -537,15 +538,15 @@ NoConn ~ 9800 4450
 NoConn ~ 9800 4650
 Text Label 10300 6150 0    50   ~ 0
 VCC
-Text Label 9800 6150 2    50   ~ 0
+Text Label 9800 6050 2    50   ~ 0
 GND
-Text Label 9800 4350 2    50   ~ 0
+Text Label 10300 4250 0    50   ~ 0
 VCC
 Text Label 10300 4350 0    50   ~ 0
 GND
-Text Label 10300 6050 0    50   ~ 0
+Text Label 9800 6150 2    50   ~ 0
 VCC
-Text Label 9800 6050 2    50   ~ 0
+Text Label 10300 6050 0    50   ~ 0
 GND
 $Comp
 L Connector_Generic:Conn_02x20_Odd_Even J1
@@ -560,4 +561,74 @@ F 3 "~" H 10000 5150 50  0001 C CNN
 $EndComp
 Text Label 10300 4550 0    50   ~ 0
 CLK
+NoConn ~ 10300 5850
+NoConn ~ 10300 5950
+NoConn ~ 9800 4750
+NoConn ~ 9800 5650
+$Comp
+L power:VCC #PWR0108
+U 1 1 5B82D1D2
+P 4000 4400
+F 0 "#PWR0108" H 4000 4250 50  0001 C CNN
+F 1 "VCC" H 4017 4573 50  0000 C CNN
+F 2 "" H 4000 4400 50  0001 C CNN
+F 3 "" H 4000 4400 50  0001 C CNN
+	1    4000 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 5B82D205
+P 4000 4700
+F 0 "#PWR0109" H 4000 4450 50  0001 C CNN
+F 1 "GND" H 4005 4527 50  0000 C CNN
+F 2 "" H 4000 4700 50  0001 C CNN
+F 3 "" H 4000 4700 50  0001 C CNN
+	1    4000 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5B82D241
+P 4000 4550
+F 0 "C1" H 4115 4596 50  0000 L CNN
+F 1 "10u" H 4115 4505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4038 4400 50  0001 C CNN
+F 3 "~" H 4000 4550 50  0001 C CNN
+	1    4000 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0110
+U 1 1 5B830F20
+P 4450 4400
+F 0 "#PWR0110" H 4450 4250 50  0001 C CNN
+F 1 "VCC" H 4467 4573 50  0000 C CNN
+F 2 "" H 4450 4400 50  0001 C CNN
+F 3 "" H 4450 4400 50  0001 C CNN
+	1    4450 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0111
+U 1 1 5B830F26
+P 4450 4700
+F 0 "#PWR0111" H 4450 4450 50  0001 C CNN
+F 1 "GND" H 4455 4527 50  0000 C CNN
+F 2 "" H 4450 4700 50  0001 C CNN
+F 3 "" H 4450 4700 50  0001 C CNN
+	1    4450 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5B830F2C
+P 4450 4550
+F 0 "C2" H 4565 4596 50  0000 L CNN
+F 1 "10u" H 4565 4505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4488 4400 50  0001 C CNN
+F 3 "~" H 4450 4550 50  0001 C CNN
+	1    4450 4550
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
