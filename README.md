@@ -48,7 +48,7 @@ I took the liberty of doing these changes:
 * The final board has male pin headers for VCC/GND, CLK/HLT, and eight extras, to reserve space for the bus. This is an attempt to make a standard for the modules, in a way both bus and signals are handled by a transversal companion board (to be developed).
 * Pins for the 74xx family were changed to allow a more compact design
 
-The whole design currently fits in a 4x3.6mm board. You can buy one for yourself at [OSHPark](https://oshpark.com/shared_projects/r4cIYBAv).
+The whole design currently fits in a 4x3.4mm board. You can buy one for yourself at [OSHPark](https://oshpark.com/shared_projects/r4cIYBAv).
 
 #### Register
 
@@ -58,9 +58,11 @@ The version 0.1 of that module contain these from the original design (shown in 
 * One 74245 (tri-state bi-directional buffer) to enable output the value to the bus on-demand
 * Eight LEDs to show the output of the 74173 (effectively, the value of the register, even if not outputting to the bus)
 
-There's only one considerable change in this design. The output LEDs are not directly from the 74173. Ben's design works, but it runs out-of-spec. According to datasheets, the maximum current is supposed to be lower than what is driven. To make this design more robust, a ULN2803 (Octal Darlington) was added to give up to 500mA to LEDs, as well as current-limiting resistors.
+There's only one considerable change in this design. The output LEDs has current limiting resistors (values to be determined). 
 
 It also contains an extra 8-bit header from the output of the 74173. This serves for "hot linking" the register without the bus - in this case, the "B" register and the ALU input.
+
+The whole design currently fits in a 4.5x3.2mm board. You can buy one for yourself at [OSHPark](https://oshpark.com/shared_projects/CUKuVAHy).
 
 ### BM - My own version
 
