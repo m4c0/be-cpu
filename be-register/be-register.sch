@@ -228,7 +228,7 @@ F 1 "LED" H 9650 2150 50  0000 C CNN
 F 2 "LED_SMD:LED_1206_3216Metric" H 9800 2100 50  0001 C CNN
 F 3 "~" H 9800 2100 50  0001 C CNN
 	1    9800 2100
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	9500 2100 9650 2100
@@ -254,7 +254,7 @@ F 1 "LED" H 9650 2350 50  0000 C CNN
 F 2 "LED_SMD:LED_1206_3216Metric" H 9800 2300 50  0001 C CNN
 F 3 "~" H 9800 2300 50  0001 C CNN
 	1    9800 2300
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	9500 2300 9650 2300
@@ -280,7 +280,7 @@ F 1 "LED" H 9650 2550 50  0000 C CNN
 F 2 "LED_SMD:LED_1206_3216Metric" H 9800 2500 50  0001 C CNN
 F 3 "~" H 9800 2500 50  0001 C CNN
 	1    9800 2500
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	9500 2500 9650 2500
@@ -306,7 +306,7 @@ F 1 "LED" H 9650 2750 50  0000 C CNN
 F 2 "LED_SMD:LED_1206_3216Metric" H 9800 2700 50  0001 C CNN
 F 3 "~" H 9800 2700 50  0001 C CNN
 	1    9800 2700
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	9500 2700 9650 2700
@@ -332,7 +332,7 @@ F 1 "LED" H 9650 2950 50  0000 C CNN
 F 2 "LED_SMD:LED_1206_3216Metric" H 9800 2900 50  0001 C CNN
 F 3 "~" H 9800 2900 50  0001 C CNN
 	1    9800 2900
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	9500 2900 9650 2900
@@ -358,7 +358,7 @@ F 1 "LED" H 9650 3150 50  0000 C CNN
 F 2 "LED_SMD:LED_1206_3216Metric" H 9800 3100 50  0001 C CNN
 F 3 "~" H 9800 3100 50  0001 C CNN
 	1    9800 3100
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	9500 3100 9650 3100
@@ -384,7 +384,7 @@ F 1 "LED" H 9650 3350 50  0000 C CNN
 F 2 "LED_SMD:LED_1206_3216Metric" H 9800 3300 50  0001 C CNN
 F 3 "~" H 9800 3300 50  0001 C CNN
 	1    9800 3300
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	9500 3300 9650 3300
@@ -410,7 +410,7 @@ F 1 "LED" H 9650 3550 50  0000 C CNN
 F 2 "LED_SMD:LED_1206_3216Metric" H 9800 3500 50  0001 C CNN
 F 3 "~" H 9800 3500 50  0001 C CNN
 	1    9800 3500
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	9500 3500 9650 3500
@@ -447,21 +447,21 @@ Wire Wire Line
 	10100 3300 10100 3100
 Wire Wire Line
 	10100 3500 10100 3300
-Text Label 7600 2800 2    50   ~ 0
+Text Label 9200 2100 2    50   ~ 0
 RAW0
-Text Label 7600 2700 2    50   ~ 0
+Text Label 9200 2300 2    50   ~ 0
 RAW1
-Text Label 7600 2600 2    50   ~ 0
+Text Label 9200 2500 2    50   ~ 0
 RAW2
-Text Label 7600 2500 2    50   ~ 0
+Text Label 9200 2700 2    50   ~ 0
 RAW3
-Text Label 7600 2400 2    50   ~ 0
+Text Label 9200 2900 2    50   ~ 0
 RAW4
-Text Label 7600 2300 2    50   ~ 0
+Text Label 9200 3100 2    50   ~ 0
 RAW5
-Text Label 7600 2200 2    50   ~ 0
+Text Label 9200 3300 2    50   ~ 0
 RAW6
-Text Label 7600 2100 2    50   ~ 0
+Text Label 9200 3500 2    50   ~ 0
 RAW7
 $Comp
 L 74xx:74LS173 U1
@@ -670,73 +670,6 @@ Text Label 2400 5200 2    50   ~ 0
 Text Label 4700 3300 2    50   ~ 0
 ~OE
 $Comp
-L Transistor_Array:ULN2803A U4
-U 1 1 5B75F47B
-P 8000 2300
-F 0 "U4" H 8000 2867 50  0000 C CNN
-F 1 "ULN2803A" H 8000 2776 50  0000 C CNN
-F 2 "Package_SO:SOIC-18W_7.5x11.6mm_P1.27mm" H 8050 1650 50  0001 L CNN
-F 3 "http://www.ti.com/lit/ds/symlink/uln2803a.pdf" H 8100 2100 50  0001 C CNN
-	1    8000 2300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0111
-U 1 1 5B7663F7
-P 8000 3000
-F 0 "#PWR0111" H 8000 2750 50  0001 C CNN
-F 1 "GND" H 8005 2827 50  0000 C CNN
-F 2 "" H 8000 3000 50  0001 C CNN
-F 3 "" H 8000 3000 50  0001 C CNN
-	1    8000 3000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9100 2200 9100 2300
-Wire Wire Line
-	9100 2300 9200 2300
-Wire Wire Line
-	9000 2300 9000 2500
-Wire Wire Line
-	9000 2500 9200 2500
-Wire Wire Line
-	8900 2400 8900 2700
-Wire Wire Line
-	8900 2700 9200 2700
-Wire Wire Line
-	8800 2500 8800 2900
-Wire Wire Line
-	8800 2900 9200 2900
-Wire Wire Line
-	8700 2600 8700 3100
-Wire Wire Line
-	8700 3100 9200 3100
-Wire Wire Line
-	8600 2700 8600 3300
-Wire Wire Line
-	8600 3300 9200 3300
-Wire Wire Line
-	8400 2700 8600 2700
-Wire Wire Line
-	8400 2600 8700 2600
-Wire Wire Line
-	8400 2500 8800 2500
-Wire Wire Line
-	8400 2400 8900 2400
-Wire Wire Line
-	8400 2300 9000 2300
-Wire Wire Line
-	8400 2200 9100 2200
-Wire Wire Line
-	8400 2100 9200 2100
-Wire Wire Line
-	8400 2800 8500 2800
-Wire Wire Line
-	8500 2800 8500 3500
-Wire Wire Line
-	8500 3500 9200 3500
-NoConn ~ 8400 2000
-$Comp
 L Connector_Generic:Conn_01x08 J4
 U 1 1 5B7DDF95
 P 8300 4800
@@ -764,17 +697,50 @@ RAW6
 Text Label 8100 5200 2    50   ~ 0
 RAW7
 $Comp
-L power:VCC #PWR0105
-U 1 1 5B801FD3
-P 10100 1900
-F 0 "#PWR0105" H 10100 1750 50  0001 C CNN
-F 1 "VCC" H 10117 2073 50  0000 C CNN
-F 2 "" H 10100 1900 50  0001 C CNN
-F 3 "" H 10100 1900 50  0001 C CNN
-	1    10100 1900
+L power:GND #PWR0105
+U 1 1 5B8A2CD2
+P 10100 3700
+F 0 "#PWR0105" H 10100 3450 50  0001 C CNN
+F 1 "GND" H 10105 3527 50  0000 C CNN
+F 2 "" H 10100 3700 50  0001 C CNN
+F 3 "" H 10100 3700 50  0001 C CNN
+	1    10100 3700
 	1    0    0    -1  
 $EndComp
+Connection ~ 10100 3500
 Wire Wire Line
-	10100 1900 10100 2100
-Connection ~ 10100 2100
+	10100 3500 10100 3700
+$Comp
+L power:GND #PWR0111
+U 1 1 5B8A939C
+P 7700 2800
+F 0 "#PWR0111" H 7700 2550 50  0001 C CNN
+F 1 "GND" H 7705 2627 50  0000 C CNN
+F 2 "" H 7700 2800 50  0001 C CNN
+F 3 "" H 7700 2800 50  0001 C CNN
+	1    7700 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0112
+U 1 1 5B8A9431
+P 7700 2500
+F 0 "#PWR0112" H 7700 2350 50  0001 C CNN
+F 1 "VCC" H 7717 2673 50  0000 C CNN
+F 2 "" H 7700 2500 50  0001 C CNN
+F 3 "" H 7700 2500 50  0001 C CNN
+	1    7700 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5B8A94FC
+P 7700 2650
+F 0 "C1" H 7815 2696 50  0000 L CNN
+F 1 "0.01u" H 7815 2605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 7738 2500 50  0001 C CNN
+F 3 "~" H 7700 2650 50  0001 C CNN
+	1    7700 2650
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
