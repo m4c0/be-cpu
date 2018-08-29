@@ -2,11 +2,23 @@
 
 Before trying to dig in this project, please check out Ben Eater's [YouTube Playlist](https://www.youtube.com/watch?v=HyznrdDSSGM&list=PLowKtXNTBypGqImE405J2565dvjafglHU) first. That's an amazing material, and he deserves a lot of credits (and tips, as well).
 
-This repository contains my own version of Ben Eater's CPU. I'm open-sourcing it because Ben's design is open as well. Maybe there'll be some videos on my own in the future. I also have plans of making them as a learning tool for others (so you can buy and tweak them).
+This repository contains my own version of Ben Eater's CPU. Some people builds a car in their spare time, I build a CPU. I'm open-sourcing it because Ben's design is open as well. Maybe there'll be some videos on my own in the future. I also have plans of making them as a learning tool for others (so you can buy and tweak them).
 
-One main difference from the original design is how I use SMT instead of THT. Mainly because I like designing and soldering using SMT (althought I'm still learning).
+## Mission
 
-Another difference is the replacement of every TTL chip (74LS) with their CMOS variants (74HC). They are easier and cheaper to find.
+First, be fun. "Fun" is more important than "cool". The final result may be cool, but the path will definitely be fun. It's what [Arduino](https://www.arduino.cc) does in the microcontroller market - there are ICs faster than ATmega, with more memory, IOs and resources in general, but it's fun to work with Arduino and you can make cool stuff with it. 
+
+## General design decisions
+
+One visible difference from Ben's original design is the usage SMD instead of THT. Mainly because I like designing and soldering using SMD (althought I'm still learning).
+
+Also, due to pricing and availability, the 74LS chips are being replaced with their CMOS variants (mostly 74HC).
+
+Ben also tried to split his design into modules, but not all modules had its own breadbord. The same goes here, but enforced to be one PCB per module.
+
+The clock itself is slow. This is not a design to run in the scale of MHz. It's meant to see what the CPU is doing as it runs simple algorithms, in a very low clock (less than 1kHz - TBC). This also allows the design to be "EMI-free" (as in "don't need to care about EMI"). 2-layer boards and lack of extra ground pins will be a thing here.
+
+Note: being able to implement [RISC-V](https://riscv.org) would be interesting, but definitely unfeasible with those modules.
 
 ## Versions
 
@@ -56,7 +68,7 @@ This is my own version of Ben's CPU. It will replace components and change archi
 
 #### Clock
 
-Still in planning. Main question is: is there a way to avoid the triple 555 and keep Ben's features?
+Still in planning. Main question is: is there a way to avoid the triple 555 and keep Ben's features (i.e. the possibility of a manual clock and debounced)?
 
 #### Register
 
@@ -65,3 +77,13 @@ Main idea to test: use 74377 (Octal DFF) and remove the reset input. A "global r
 ### BC - Compact and cheap
 
 This is will be smaller and containing less modules (or cheaper ones). All modules will be non-suitable for children under 4, because they will be tiny (1.35"/3.7cm wide). It provides building blocks to easily test high level architectures, while still being a good educational toy.
+
+The main bus will probably be done with card edges connecting to a `HSEC8-120-01-SM-DV-A` from Samtec (or, at least, some 0.8mm similar product).
+
+The connector will be partially reversible. When reversed, it will allow the board to operate on a different bus. One side will be the "main bus" and the other will be the "secondary bus".
+
+#### Register
+
+This is a 17.2x35mm board with a 74377 (Octal DFF), a 74245 (Bus Driver) and a ULN2803 (LED Driver). It supports a single bus, like Ben's original design. Also following his design, register "A" will be on main bus, and "B" will be secondary. Probably...
+
+The absence of reset follows the same idea used in BM - the reset can be done by enabling the output and leaving the bus grounded.
