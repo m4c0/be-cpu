@@ -2,21 +2,21 @@
 
 Before trying to dig in this project, please check out Ben Eater's [YouTube Playlist](https://www.youtube.com/watch?v=HyznrdDSSGM&list=PLowKtXNTBypGqImE405J2565dvjafglHU) first. That's an amazing material, and he deserves a lot of credits (and tips, as well).
 
-This repository contains my own version of Ben Eater's CPU. Some people builds a car in their spare time, I build a CPU. I'm open-sourcing it because Ben's design is open as well. Maybe there'll be some videos on my own in the future. I also have plans of making them as a learning tool for others (so you can buy and tweak them).
+This repository contains my own version of Ben Eater's CPU. Some people build cars in their spare time, I build a CPU. I'm open-sourcing it because Ben's design is open as well - and Open Source Hardware is a cool concept. Maybe there'll be some videos on my own in the future; maybe I'll sell kits... Only time will tell.
 
 ## Mission
 
-First, be fun. "Fun" is more important than "cool". The final result may be cool, but the path will definitely be fun. It's what [Arduino](https://www.arduino.cc) does in the microcontroller market - there are ICs faster than ATmega, with more memory, IOs and resources in general, but it's fun to work with Arduino and you can make cool stuff with it. 
+Be fun. "Fun" is more important than "cool". The final result may be cool, but the path will definitely be fun. It's what [Arduino](https://www.arduino.cc) does in the microcontroller market - there are ICs faster than ATmega, with more memory, IOs and resources in general, but it's fun to work with Arduino and you can make cool stuff with it. 
 
 ## General design decisions
 
-One visible difference from Ben's original design is the usage SMD instead of THT. Mainly because I like designing and soldering using SMD (althought I'm still learning).
+One noticeable difference from Ben's original design is the usage of SMD instead of THT. Mainly because I like designing and soldering using SMD (althought I'm still learning).
 
-Also, due to pricing and availability, the 74LS chips are being replaced with their CMOS variants (mostly 74HC).
+Also, due to pricing and availability, the 74LS chips are being replaced with their CMOS variants - mostly 74HC. It has a wide range of voltages, supporting from 2V up to 6V. 74HCT would be strictier, supporting 4.5 to 5V, which is right at the edge of what USB can provide. The 2-6V range allows us to change the supply voltage as required.
 
-Ben also tried to split his design into modules, but not all modules had its own breadbord. The same goes here, but enforced to be one PCB per module.
+Ben also tried to split his design into modules, but not all modules had its own breadbord. The same goes here, but the design is strongly modular, with one module per "PCB card".
 
-The clock itself is slow. This is not a design to run in the scale of MHz. It's meant to see what the CPU is doing as it runs simple algorithms, in a very low clock (less than 1kHz - TBC). This also allows the design to be "EMI-free" (as in "don't need to care about EMI"). 2-layer boards and lack of extra ground pins will be a thing here.
+The clock is slow - this is not a design to run in the scale of MHz. It's meant to see what the CPU is doing as it runs simple algorithms, in a very low clock (less than 1kHz - TBC). This also allows the design to be "EMI-free" (as in "don't need to care about EMI"). 2-layer boards and lack of extra ground pins will be a thing here.
 
 Note: being able to implement [RISC-V](https://riscv.org) would be interesting, but definitely unfeasible with those modules.
 
@@ -28,11 +28,11 @@ Note: being able to implement [RISC-V](https://riscv.org) would be interesting, 
 
 This is as close as possible to Ben's own version. There's no substantial change in his design, other than changes that are required to make the CPU work.
 
-This version acts as a "reference design" for other versions.
+Since Ben's design works, troubleshooting those modules will be easier. This version then acts as a "reference design" when experimenting new designs and ideas for other versions.
 
 #### Clock
 
-The version 0.1 of that module follows these original design decisions (shown in [this video](https://www.youtube.com/watch?v=SmQ5K7UQPMM)):
+The version 0.1 follows these original design decisions (shown in [this video](https://www.youtube.com/watch?v=SmQ5K7UQPMM)):
 
 * One astable 555 as a clock
 * One monostable 555 as a push button debouncer
@@ -50,6 +50,14 @@ I took the liberty of doing these changes:
 
 The whole design currently fits in a 4x3.4cm board. You can buy one for yourself at [OSHPark](https://oshpark.com/shared_projects/r4cIYBAv).
 
+Improvements for the next revision:
+
+* Add a OSH stamp to the back silk
+* Increase the LED resistor (currently at 220), because the LED is annoyingly bright now
+* Increase the push button debounce time (it works, but it feels faster than it should)
+* Find more SMD-friendly button, switch and trimpot
+* Flip the design. The pin header is on top, so all text is upside-down and it drives me nuts
+
 #### Register
 
 The version 0.1 of that module contain these from the original design (shown in [this video](https://www.youtube.com/watch?v=CiMaWbz_6E8)):
@@ -58,11 +66,20 @@ The version 0.1 of that module contain these from the original design (shown in 
 * One 74245 (tri-state bi-directional buffer) to enable output the value to the bus on-demand
 * Eight LEDs to show the output of the 74173 (effectively, the value of the register, even if not outputting to the bus)
 
-There's only one considerable change in this design. The output LEDs has current limiting resistors (values to be determined). 
+There's only one considerable change in this design. The output LEDs has current limiting resistors - currently 220ohms.
 
-It also contains an extra 8-bit header from the output of the 74173. This serves for "hot linking" the register without the bus - in this case, the "B" register and the ALU input.
+It also contains an extra 8-bit header from the output of the 74173. This serves for "hot linking" the register without the bus - in this case, "A" and "B" registers and the ALU input.
 
 The whole design currently fits in a 4.5x3.2cm board. You can buy one for yourself at [OSHPark](https://oshpark.com/shared_projects/CUKuVAHy).
+
+Improvements for the next revision:
+
+* Add a OSH stamp to the back silk
+* Consider a dual hot-link pin header, allowing to "sandwich" the ALU using standard headers
+
+#### ALU
+
+#### Bus
 
 ### BM - My own version
 
@@ -70,11 +87,23 @@ This is my own version of Ben's CPU. It will replace components and change archi
 
 #### Clock
 
-Still in planning. Main question is: is there a way to avoid the triple 555 and keep Ben's features (i.e. the possibility of a manual clock and debounced)?
+Still in planning. Current plan:
+
+* One astable 555 as a clock
+* A RC+Shimitt Trigger for debouncing the push button
+
+Questions to answer:
+
+* Is there a better way to debounce the toggle switch?
+* What's the minimal circuit to do the logic (switch+halt)?
 
 #### Register
 
 Main idea to test: use 74377 (Octal DFF) and remove the reset input. A "global reset" may be achieveable if we keep the pull-down resistors on the bus and we enable all register's input - this way, the bus will be zeroed and the registers will latch that value.
+
+#### ALU
+
+#### Bus
 
 ### BC - Compact and cheap
 
