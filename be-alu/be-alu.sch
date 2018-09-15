@@ -1,0 +1,747 @@
+EESchema Schematic File Version 4
+LIBS:be-alu-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L 74xx:74LS245 U5
+U 1 1 5B8DA0B7
+P 5800 2200
+F 0 "U5" H 6050 3000 50  0000 C CNN
+F 1 "74LS245" H 6050 2900 50  0000 C CNN
+F 2 "Package_SO:SO-20_12.8x7.5mm_P1.27mm" H 5800 2200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS245" H 5800 2200 50  0001 C CNN
+	1    5800 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS283 U3
+U 1 1 5B8DA1A8
+P 3900 2200
+F 0 "U3" H 4150 3000 50  0000 C CNN
+F 1 "74LS283" H 4150 2900 50  0000 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 3900 2200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS283" H 3900 2200 50  0001 C CNN
+	1    3900 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS283 U4
+U 1 1 5B8DA207
+P 3900 4500
+F 0 "U4" H 4150 5300 50  0000 C CNN
+F 1 "74LS283" H 4150 5200 50  0000 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 3900 4500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS283" H 3900 4500 50  0001 C CNN
+	1    3900 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 5B8DAF58
+P 7800 1300
+F 0 "J1" H 7880 1292 50  0000 L CNN
+F 1 "Conn_01x02" H 7880 1201 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal" H 7800 1300 50  0001 C CNN
+F 3 "~" H 7800 1300 50  0001 C CNN
+	1    7800 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x08 J2
+U 1 1 5B8DB087
+P 7800 1900
+F 0 "J2" H 7880 1892 50  0000 L CNN
+F 1 "Conn_01x08" H 7880 1801 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Horizontal" H 7800 1900 50  0001 C CNN
+F 3 "~" H 7800 1900 50  0001 C CNN
+	1    7800 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J3
+U 1 1 5B8DB296
+P 7800 2600
+F 0 "J3" H 7880 2592 50  0000 L CNN
+F 1 "Conn_01x04" H 7880 2501 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 7800 2600 50  0001 C CNN
+F 3 "~" H 7800 2600 50  0001 C CNN
+	1    7800 2600
+	1    0    0    -1  
+$EndComp
+Text Label 7600 1300 2    50   ~ 0
+VCC
+Text Label 7600 1400 2    50   ~ 0
+GND
+Text Label 7600 1600 2    50   ~ 0
+BUS0
+Text Label 7600 1700 2    50   ~ 0
+BUS1
+Text Label 7600 1800 2    50   ~ 0
+BUS2
+Text Label 7600 1900 2    50   ~ 0
+BUS3
+Text Label 7600 2000 2    50   ~ 0
+BUS4
+Text Label 7600 2100 2    50   ~ 0
+BUS5
+Text Label 7600 2200 2    50   ~ 0
+BUS6
+Text Label 7600 2300 2    50   ~ 0
+BUS7
+Text Label 7600 2500 2    50   ~ 0
+CLK
+Text Label 7600 2800 2    50   ~ 0
+CO
+Text Label 7600 2700 2    50   ~ 0
+~OE
+Text Label 7600 2600 2    50   ~ 0
+SU
+Text Label 1600 2100 2    50   ~ 0
+SU
+Text Label 1600 2700 2    50   ~ 0
+SU
+Text Label 1600 3300 2    50   ~ 0
+SU
+Text Label 1600 3900 2    50   ~ 0
+SU
+Text Label 1600 4500 2    50   ~ 0
+SU
+Text Label 1600 5100 2    50   ~ 0
+SU
+Text Label 1600 5700 2    50   ~ 0
+SU
+Text Label 1600 6300 2    50   ~ 0
+SU
+$Comp
+L Connector_Generic:Conn_01x08 J4
+U 1 1 5B8DC0AD
+P 9300 1600
+F 0 "J4" H 9380 1592 50  0000 L CNN
+F 1 "Conn_01x08" H 9380 1501 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical_SMD_Pin1Left" H 9300 1600 50  0001 C CNN
+F 3 "~" H 9300 1600 50  0001 C CNN
+	1    9300 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x08 J5
+U 1 1 5B8DC100
+P 9300 2500
+F 0 "J5" H 9380 2492 50  0000 L CNN
+F 1 "Conn_01x08" H 9380 2401 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical_SMD_Pin1Left" H 9300 2500 50  0001 C CNN
+F 3 "~" H 9300 2500 50  0001 C CNN
+	1    9300 2500
+	1    0    0    -1  
+$EndComp
+Text Label 9100 1300 2    50   ~ 0
+A0
+Text Label 9100 1400 2    50   ~ 0
+A1
+Text Label 9100 1500 2    50   ~ 0
+A2
+Text Label 9100 1600 2    50   ~ 0
+A3
+Text Label 9100 1700 2    50   ~ 0
+A4
+Text Label 9100 1800 2    50   ~ 0
+A5
+Text Label 9100 1900 2    50   ~ 0
+A6
+Text Label 9100 2000 2    50   ~ 0
+A7
+Text Label 9100 2200 2    50   ~ 0
+B0
+Text Label 9100 2300 2    50   ~ 0
+B1
+Text Label 9100 2400 2    50   ~ 0
+B2
+Text Label 9100 2500 2    50   ~ 0
+B3
+Text Label 9100 2600 2    50   ~ 0
+B4
+Text Label 9100 2700 2    50   ~ 0
+B5
+Text Label 9100 2800 2    50   ~ 0
+B6
+Text Label 9100 2900 2    50   ~ 0
+B7
+Text Label 1600 1900 2    50   ~ 0
+B0
+Text Label 1600 2500 2    50   ~ 0
+B1
+Text Label 1600 3100 2    50   ~ 0
+B2
+Text Label 1600 3700 2    50   ~ 0
+B3
+Text Label 1600 4300 2    50   ~ 0
+B4
+Text Label 1600 4900 2    50   ~ 0
+B5
+Text Label 1600 5500 2    50   ~ 0
+B6
+Text Label 1600 6100 2    50   ~ 0
+B7
+Text Label 3400 1700 2    50   ~ 0
+SU
+Text Label 4400 2200 0    50   ~ 0
+C4
+Text Label 3400 4000 2    50   ~ 0
+C4
+Text Label 2200 2000 0    50   ~ 0
+~B0
+Text Label 2200 2600 0    50   ~ 0
+~B1
+Text Label 2200 3200 0    50   ~ 0
+~B2
+Text Label 2200 3800 0    50   ~ 0
+~B3
+Text Label 2200 4400 0    50   ~ 0
+~B4
+Text Label 2200 5000 0    50   ~ 0
+~B5
+Text Label 2200 5600 0    50   ~ 0
+~B6
+Text Label 2200 6200 0    50   ~ 0
+~B7
+Text Label 3400 2400 2    50   ~ 0
+~B0
+Text Label 3400 2500 2    50   ~ 0
+~B1
+Text Label 3400 2600 2    50   ~ 0
+~B2
+Text Label 3400 2700 2    50   ~ 0
+~B3
+Text Label 3400 4700 2    50   ~ 0
+~B4
+Text Label 3400 4800 2    50   ~ 0
+~B5
+Text Label 3400 4900 2    50   ~ 0
+~B6
+Text Label 3400 5000 2    50   ~ 0
+~B7
+$Comp
+L power:GND #PWR0101
+U 1 1 5B8DDD99
+P 3900 3000
+F 0 "#PWR0101" H 3900 2750 50  0001 C CNN
+F 1 "GND" H 3905 2827 50  0000 C CNN
+F 2 "" H 3900 3000 50  0001 C CNN
+F 3 "" H 3900 3000 50  0001 C CNN
+	1    3900 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5B8DDDCB
+P 3900 5300
+F 0 "#PWR0102" H 3900 5050 50  0001 C CNN
+F 1 "GND" H 3905 5127 50  0000 C CNN
+F 2 "" H 3900 5300 50  0001 C CNN
+F 3 "" H 3900 5300 50  0001 C CNN
+	1    3900 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5B8DDFCE
+P 5800 3000
+F 0 "#PWR0103" H 5800 2750 50  0001 C CNN
+F 1 "GND" H 5805 2827 50  0000 C CNN
+F 2 "" H 5800 3000 50  0001 C CNN
+F 3 "" H 5800 3000 50  0001 C CNN
+	1    5800 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0104
+U 1 1 5B8DE151
+P 3900 3700
+F 0 "#PWR0104" H 3900 3550 50  0001 C CNN
+F 1 "VCC" H 3917 3873 50  0000 C CNN
+F 2 "" H 3900 3700 50  0001 C CNN
+F 3 "" H 3900 3700 50  0001 C CNN
+	1    3900 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0105
+U 1 1 5B8DE203
+P 3900 1400
+F 0 "#PWR0105" H 3900 1250 50  0001 C CNN
+F 1 "VCC" H 3917 1573 50  0000 C CNN
+F 2 "" H 3900 1400 50  0001 C CNN
+F 3 "" H 3900 1400 50  0001 C CNN
+	1    3900 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0106
+U 1 1 5B8DE22E
+P 5800 1400
+F 0 "#PWR0106" H 5800 1250 50  0001 C CNN
+F 1 "VCC" H 5817 1573 50  0000 C CNN
+F 2 "" H 5800 1400 50  0001 C CNN
+F 3 "" H 5800 1400 50  0001 C CNN
+	1    5800 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0107
+U 1 1 5B8DE47B
+P 10500 1800
+F 0 "#PWR0107" H 10500 1650 50  0001 C CNN
+F 1 "VCC" H 10517 1973 50  0000 C CNN
+F 2 "" H 10500 1800 50  0001 C CNN
+F 3 "" H 10500 1800 50  0001 C CNN
+	1    10500 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 5B8DE4A6
+P 10500 2100
+F 0 "#PWR0108" H 10500 1850 50  0001 C CNN
+F 1 "GND" H 10505 1927 50  0000 C CNN
+F 2 "" H 10500 2100 50  0001 C CNN
+F 3 "" H 10500 2100 50  0001 C CNN
+	1    10500 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5B8DE50D
+P 10500 1950
+F 0 "C1" H 10615 1996 50  0000 L CNN
+F 1 "0.1u" H 10615 1905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 10538 1800 50  0001 C CNN
+F 3 "~" H 10500 1950 50  0001 C CNN
+	1    10500 1950
+	1    0    0    -1  
+$EndComp
+Text Label 6300 1700 0    50   ~ 0
+BUS0
+Text Label 6300 1800 0    50   ~ 0
+BUS1
+Text Label 6300 1900 0    50   ~ 0
+BUS2
+Text Label 6300 2000 0    50   ~ 0
+BUS3
+Text Label 6300 2100 0    50   ~ 0
+BUS4
+Text Label 6300 2200 0    50   ~ 0
+BUS5
+Text Label 6300 2300 0    50   ~ 0
+BUS6
+Text Label 6300 2400 0    50   ~ 0
+BUS7
+Text Label 5300 2700 2    50   ~ 0
+~OE
+$Comp
+L power:VCC #PWR0109
+U 1 1 5B8DF766
+P 4900 2500
+F 0 "#PWR0109" H 4900 2350 50  0001 C CNN
+F 1 "VCC" H 4917 2673 50  0000 C CNN
+F 2 "" H 4900 2500 50  0001 C CNN
+F 3 "" H 4900 2500 50  0001 C CNN
+	1    4900 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 2600 4900 2600
+Wire Wire Line
+	4900 2600 4900 2500
+Text Label 3400 1900 2    50   ~ 0
+A0
+Text Label 3400 2000 2    50   ~ 0
+A1
+Text Label 3400 2100 2    50   ~ 0
+A2
+Text Label 3400 2200 2    50   ~ 0
+A3
+Text Label 3400 4300 2    50   ~ 0
+A5
+Text Label 3400 4200 2    50   ~ 0
+A4
+Text Label 3400 4400 2    50   ~ 0
+A6
+Text Label 3400 4500 2    50   ~ 0
+A7
+Text Label 5300 1700 2    50   ~ 0
+RAW0
+Text Label 5300 1800 2    50   ~ 0
+RAW1
+Text Label 5300 1900 2    50   ~ 0
+RAW2
+Text Label 5300 2000 2    50   ~ 0
+RAW3
+Text Label 5300 2100 2    50   ~ 0
+RAW4
+Text Label 5300 2200 2    50   ~ 0
+RAW5
+Text Label 5300 2300 2    50   ~ 0
+RAW6
+Text Label 5300 2400 2    50   ~ 0
+RAW7
+Text Label 4400 1700 0    50   ~ 0
+RAW0
+Text Label 4400 1800 0    50   ~ 0
+RAW1
+Text Label 4400 1900 0    50   ~ 0
+RAW2
+Text Label 4400 2000 0    50   ~ 0
+RAW3
+Text Label 4400 4000 0    50   ~ 0
+RAW4
+Text Label 4400 4100 0    50   ~ 0
+RAW5
+Text Label 4400 4200 0    50   ~ 0
+RAW6
+Text Label 4400 4300 0    50   ~ 0
+RAW7
+Text Label 4400 4500 0    50   ~ 0
+CO
+$Comp
+L Device:LED D1
+U 1 1 5B8E08D8
+P 8450 3700
+F 0 "D1" H 8450 3600 50  0000 C CNN
+F 1 "LED" H 8442 3536 50  0001 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 8450 3700 50  0001 C CNN
+F 3 "~" H 8450 3700 50  0001 C CNN
+	1    8450 3700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5B8E099E
+P 8150 3700
+F 0 "R1" V 8050 3700 50  0000 C CNN
+F 1 "220" V 8150 3700 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 8080 3700 50  0001 C CNN
+F 3 "~" H 8150 3700 50  0001 C CNN
+	1    8150 3700
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 5B8E0A50
+P 8800 5300
+F 0 "#PWR0110" H 8800 5050 50  0001 C CNN
+F 1 "GND" H 8805 5127 50  0000 C CNN
+F 2 "" H 8800 5300 50  0001 C CNN
+F 3 "" H 8800 5300 50  0001 C CNN
+	1    8800 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 5B8E0CAD
+P 8450 3900
+F 0 "D2" H 8450 3800 50  0000 C CNN
+F 1 "LED" H 8442 3736 50  0001 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 8450 3900 50  0001 C CNN
+F 3 "~" H 8450 3900 50  0001 C CNN
+	1    8450 3900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5B8E0CB4
+P 8150 3900
+F 0 "R2" V 8050 3900 50  0000 C CNN
+F 1 "220" V 8150 3900 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 8080 3900 50  0001 C CNN
+F 3 "~" H 8150 3900 50  0001 C CNN
+	1    8150 3900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D3
+U 1 1 5B8E0CDC
+P 8450 4100
+F 0 "D3" H 8450 4000 50  0000 C CNN
+F 1 "LED" H 8442 3936 50  0001 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 8450 4100 50  0001 C CNN
+F 3 "~" H 8450 4100 50  0001 C CNN
+	1    8450 4100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5B8E0CE3
+P 8150 4100
+F 0 "R3" V 8050 4100 50  0000 C CNN
+F 1 "220" V 8150 4100 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 8080 4100 50  0001 C CNN
+F 3 "~" H 8150 4100 50  0001 C CNN
+	1    8150 4100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D4
+U 1 1 5B8E0D0D
+P 8450 4300
+F 0 "D4" H 8450 4200 50  0000 C CNN
+F 1 "LED" H 8442 4136 50  0001 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 8450 4300 50  0001 C CNN
+F 3 "~" H 8450 4300 50  0001 C CNN
+	1    8450 4300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5B8E0D14
+P 8150 4300
+F 0 "R4" V 8050 4300 50  0000 C CNN
+F 1 "220" V 8150 4300 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 8080 4300 50  0001 C CNN
+F 3 "~" H 8150 4300 50  0001 C CNN
+	1    8150 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D5
+U 1 1 5B8E0D40
+P 8450 4500
+F 0 "D5" H 8450 4400 50  0000 C CNN
+F 1 "LED" H 8442 4336 50  0001 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 8450 4500 50  0001 C CNN
+F 3 "~" H 8450 4500 50  0001 C CNN
+	1    8450 4500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5B8E0D47
+P 8150 4500
+F 0 "R5" V 8050 4500 50  0000 C CNN
+F 1 "220" V 8150 4500 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 8080 4500 50  0001 C CNN
+F 3 "~" H 8150 4500 50  0001 C CNN
+	1    8150 4500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D6
+U 1 1 5B8E0D75
+P 8450 4700
+F 0 "D6" H 8450 4600 50  0000 C CNN
+F 1 "LED" H 8442 4536 50  0001 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 8450 4700 50  0001 C CNN
+F 3 "~" H 8450 4700 50  0001 C CNN
+	1    8450 4700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5B8E0D7C
+P 8150 4700
+F 0 "R6" V 8050 4700 50  0000 C CNN
+F 1 "220" V 8150 4700 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 8080 4700 50  0001 C CNN
+F 3 "~" H 8150 4700 50  0001 C CNN
+	1    8150 4700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D7
+U 1 1 5B8E0DB0
+P 8450 4900
+F 0 "D7" H 8450 4800 50  0000 C CNN
+F 1 "LED" H 8442 4736 50  0001 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 8450 4900 50  0001 C CNN
+F 3 "~" H 8450 4900 50  0001 C CNN
+	1    8450 4900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5B8E0DB7
+P 8150 4900
+F 0 "R7" V 8050 4900 50  0000 C CNN
+F 1 "220" V 8150 4900 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 8080 4900 50  0001 C CNN
+F 3 "~" H 8150 4900 50  0001 C CNN
+	1    8150 4900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D8
+U 1 1 5B8E0DE9
+P 8450 5100
+F 0 "D8" H 8450 5000 50  0000 C CNN
+F 1 "LED" H 8442 4936 50  0001 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 8450 5100 50  0001 C CNN
+F 3 "~" H 8450 5100 50  0001 C CNN
+	1    8450 5100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5B8E0DF0
+P 8150 5100
+F 0 "R8" V 8050 5100 50  0000 C CNN
+F 1 "220" V 8150 5100 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 8080 5100 50  0001 C CNN
+F 3 "~" H 8150 5100 50  0001 C CNN
+	1    8150 5100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8800 5300 8800 5100
+Wire Wire Line
+	8800 3700 8600 3700
+Wire Wire Line
+	8600 3900 8800 3900
+Connection ~ 8800 3900
+Wire Wire Line
+	8800 3900 8800 3700
+Wire Wire Line
+	8600 4100 8800 4100
+Connection ~ 8800 4100
+Wire Wire Line
+	8800 4100 8800 3900
+Wire Wire Line
+	8600 4300 8800 4300
+Connection ~ 8800 4300
+Wire Wire Line
+	8800 4300 8800 4100
+Wire Wire Line
+	8600 4500 8800 4500
+Connection ~ 8800 4500
+Wire Wire Line
+	8800 4500 8800 4300
+Wire Wire Line
+	8600 4700 8800 4700
+Connection ~ 8800 4700
+Wire Wire Line
+	8800 4700 8800 4500
+Wire Wire Line
+	8600 4900 8800 4900
+Connection ~ 8800 4900
+Wire Wire Line
+	8800 4900 8800 4700
+Wire Wire Line
+	8600 5100 8800 5100
+Connection ~ 8800 5100
+Wire Wire Line
+	8800 5100 8800 4900
+Text Label 8000 3700 2    50   ~ 0
+RAW0
+Text Label 8000 3900 2    50   ~ 0
+RAW1
+Text Label 8000 4100 2    50   ~ 0
+RAW2
+Text Label 8000 4300 2    50   ~ 0
+RAW3
+Text Label 8000 4500 2    50   ~ 0
+RAW4
+Text Label 8000 4700 2    50   ~ 0
+RAW5
+Text Label 8000 4900 2    50   ~ 0
+RAW6
+Text Label 8000 5100 2    50   ~ 0
+RAW7
+$Comp
+L components:74HC86 U1
+U 1 1 5B8E3730
+P 1900 2000
+F 0 "U1" H 1900 2325 50  0000 C CNN
+F 1 "74LS86" H 1900 2234 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1900 2000 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 1900 2000 50  0001 C CNN
+	1    1900 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L components:74HC86 U1
+U 2 1 5B8E3795
+P 1900 2600
+F 0 "U1" H 1900 2925 50  0000 C CNN
+F 1 "74LS86" H 1900 2834 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1900 2600 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 1900 2600 50  0001 C CNN
+	2    1900 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L components:74HC86 U1
+U 3 1 5B8E37F5
+P 1900 3200
+F 0 "U1" H 1900 3525 50  0000 C CNN
+F 1 "74LS86" H 1900 3434 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1900 3200 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 1900 3200 50  0001 C CNN
+	3    1900 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L components:74HC86 U1
+U 4 1 5B8E3855
+P 1900 3800
+F 0 "U1" H 1900 4125 50  0000 C CNN
+F 1 "74LS86" H 1900 4034 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1900 3800 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 1900 3800 50  0001 C CNN
+	4    1900 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L components:74HC86 U2
+U 1 1 5B8E4AD6
+P 1900 4400
+F 0 "U2" H 1900 4725 50  0000 C CNN
+F 1 "74LS86" H 1900 4634 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1900 4400 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 1900 4400 50  0001 C CNN
+	1    1900 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L components:74HC86 U2
+U 2 1 5B8E4ADD
+P 1900 5000
+F 0 "U2" H 1900 5325 50  0000 C CNN
+F 1 "74LS86" H 1900 5234 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1900 5000 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 1900 5000 50  0001 C CNN
+	2    1900 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L components:74HC86 U2
+U 3 1 5B8E4AE4
+P 1900 5600
+F 0 "U2" H 1900 5925 50  0000 C CNN
+F 1 "74LS86" H 1900 5834 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1900 5600 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 1900 5600 50  0001 C CNN
+	3    1900 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L components:74HC86 U2
+U 4 1 5B8E4AEB
+P 1900 6200
+F 0 "U2" H 1900 6525 50  0000 C CNN
+F 1 "74LS86" H 1900 6434 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1900 6200 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 1900 6200 50  0001 C CNN
+	4    1900 6200
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

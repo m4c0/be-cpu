@@ -65,6 +65,7 @@ The version 0.1 of that module contain these from the original design (shown in 
 * Two 74173 (quad D-Flip Flop with tri-state output, async clear and chip-select) to read from the bus and store the value
 * One 74245 (tri-state bi-directional buffer) to enable output the value to the bus on-demand
 * Eight LEDs to show the output of the 74173 (effectively, the value of the register, even if not outputting to the bus)
+* There are four signals: clock, reset (tied up to the MR of the 74173), output enabled (inverted), input enabled (inverted)
 
 There's only one considerable change in this design. The output LEDs has current limiting resistors - currently 220ohms.
 
@@ -76,6 +77,7 @@ Improvements for the next revision:
 
 * Add a OSH stamp to the back silk
 * Consider a dual hot-link pin header, allowing to "sandwich" the ALU using standard headers
+* Realign the hot-link to be easier to copy over to the ALU
 
 #### ALU
 
@@ -99,11 +101,20 @@ Questions to answer:
 
 #### Register
 
-Main idea to test: use 74377 (Octal DFF) and remove the reset input. A "global reset" may be achieveable if we keep the pull-down resistors on the bus and we enable all register's input - this way, the bus will be zeroed and the registers will latch that value.
+Questions/ideas:
+
+* Use a 74377 (Octal DFF), saving one IC
+* Check if the 74377 can drive eight LEDs - maybe use a ULN2803 as LED driver
+* Remove the reset input. A "global reset" may be achieveable if we keep the pull-down resistors on the bus and we enable all register's input - this way, the bus will be zeroed and the registers will latch that value.
+* Can we send IE/OE already in sync with the clock?
 
 #### ALU
 
 #### Bus
+
+Idea:
+
+* Allow customization of the bus signal
 
 ### BC - Compact and cheap
 
@@ -118,3 +129,5 @@ The connector will be partially reversible. When reversed, it will allow the boa
 This is a 17.2x35mm board with a 74377 (Octal DFF), a 74245 (Bus Driver) and a ULN2803 (LED Driver). It supports a single bus, like Ben's original design. Also following his design, register "A" will be on main bus, and "B" will be secondary. Probably...
 
 The absence of reset follows the same idea used in BM - the reset can be done by enabling the output and leaving the bus grounded.
+
+Currently, this is not tested yet.
