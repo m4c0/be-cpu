@@ -81,7 +81,26 @@ Improvements for the next revision:
 
 #### ALU
 
+The version 0.1 of that module contain these from the original design (shown in [Ben's site](https://eater.net/8bit/alu)):
+
+* Two 74283 (4-bit ALU)
+* Two 7486 (Quad-XOR) to conditionally invert input "B"
+* One 74245 (tri-state bi-directional buffer) to enable output the value to the bus on-demand
+* Eight LEDs to show the output of the 74283 (effectively, the output of the ALU, even if not outputting to the bus)
+
+There's only one considerable change in this design. The output LEDs has current limiting resistors - currently 220ohms.
+
+This board exposes a double-sided 16-bit header (8-bit each side) to hot-link A and B registers.
+
+Still on the works, requiring the registers for the Carry Out and Zero flags.
+
+#### RAM
+
+Currently on research. Until said otherwise, this module won't have a "BE" version, since there's no 74189 in SMD. All major manufacturers discontinued that product, and the "unbranded" Chinese manufacturers only sells them in THT.
+
 #### Bus
+
+No board yet, only some ideas. This should contain pin headers for all modules. All signals will be hardcoded, to simplify the design of the individual modules.
 
 ### BM - My own version
 
