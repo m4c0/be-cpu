@@ -701,7 +701,7 @@ Wire Wire Line
 Text Label 4750 3900 0    50   ~ 0
 CLK
 $Comp
-L be-clock:74xx04 U4
+L components:7404 U4
 U 2 1 5B6C0299
 P 3250 4400
 F 0 "U4" H 3250 4750 50  0000 C CNN
@@ -712,7 +712,7 @@ F 3 "" H 3250 4400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L be-clock:74xx04 U4
+L components:7404 U4
 U 1 1 5B6C094E
 P 1500 3900
 F 0 "U4" H 1500 4250 50  0000 C CNN
@@ -723,7 +723,7 @@ F 3 "" H 1500 3900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L be-clock:74xx08 U5
+L components:7408 U5
 U 1 1 5B6CB2BF
 P 2400 3300
 F 0 "U5" H 2400 3600 50  0000 C CNN
@@ -734,7 +734,7 @@ F 3 "" H 2400 3300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L be-clock:74xx08 U5
+L components:7408 U5
 U 2 1 5B6CB420
 P 2400 4000
 F 0 "U5" H 2400 4300 50  0000 C CNN
@@ -745,7 +745,7 @@ F 3 "" H 2400 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L be-clock:74xx08 U5
+L components:7408 U5
 U 3 1 5B6CB4F2
 P 4250 3900
 F 0 "U5" H 4250 4200 50  0000 C CNN
@@ -756,7 +756,7 @@ F 3 "" H 4250 3900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L be-clock:74xx32 U6
+L components:7432 U6
 U 4 1 5B6D145C
 P 3250 3600
 F 0 "U6" H 3250 3900 50  0000 C CNN
