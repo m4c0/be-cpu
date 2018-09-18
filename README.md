@@ -26,7 +26,7 @@ Note: being able to implement [RISC-V](https://riscv.org) would be interesting, 
 
 ### BE - Eater's version
 
-This is as close as possible to Ben's own version. There's no substantial change in his design, other than changes that are required to make the CPU work.
+This is as close as possible to Ben's own version. There's no substantial change in his design, other than changes that are required to make the CPU work, and current-limiting resistors.
 
 Since Ben's design works, troubleshooting those modules will be easier. This version then acts as a "reference design" when experimenting new designs and ideas for other versions.
 
@@ -53,7 +53,7 @@ The whole design currently fits in a 4x3.4cm board. You can buy one for yourself
 Improvements for the next revision:
 
 * Add a OSH stamp to the back silk
-* Increase the LED resistor (currently at 220), because the LED is annoyingly bright now
+* Increase the LED resistor (currently at 220), because the LED is annoyingly bright now. It seems 470 gives a nice result, but testing showed it varies with the load at the CLK pin - powering another LED from CLK drastically reduces the onboard LED brightness. This may be the end result after all modules are tied up to the same CLK bus.
 * Increase the push button debounce time (it works, but it feels faster than it should)
 * Find more SMD-friendly button, switch and trimpot
 * Flip the design. The pin header is on top, so all text is upside-down and it drives me nuts
@@ -87,12 +87,13 @@ The version 0.1 of that module contain these from the original design (shown in 
 * Two 7486 (Quad-XOR) to conditionally invert input "B"
 * One 74245 (tri-state bi-directional buffer) to enable output the value to the bus on-demand
 * Eight LEDs to show the output of the 74283 (effectively, the output of the ALU, even if not outputting to the bus)
-
-There's only one considerable change in this design. The output LEDs has current limiting resistors - currently 220ohms.
+* One 7402 (Quad-NOR) and one 7408 (Quad-AND) to create the "zero flag" whenever the output of ALU is zero
+* One 74173 (Quad D-FF) to act as a "flag register", storing the "zero flag" and the "carry flag"
+* Two extra LEDs to show ZF and CF (unbuffered)
 
 This board exposes a double-sided 16-bit header (8-bit each side) to hot-link A and B registers.
 
-Still on the works, requiring the registers for the Carry Out and Zero flags.
+The whole design currently fits in a 5.7x3.8cm board.
 
 #### RAM
 
@@ -129,6 +130,8 @@ Questions/ideas:
 
 #### ALU
 
+#### RAM
+
 #### Bus
 
 Idea:
@@ -149,4 +152,4 @@ This is a 17.2x35mm board with a 74377 (Octal DFF), a 74245 (Bus Driver) and a U
 
 The absence of reset follows the same idea used in BM - the reset can be done by enabling the output and leaving the bus grounded.
 
-Currently, this is not tested yet.
+Currently, this is not tested yet. The BM will be used as "test bench" for some ideas, like removing the ULN2803 or changing the flip-flop IC.
